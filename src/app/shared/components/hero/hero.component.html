@@ -1,0 +1,65 @@
+<section class="hero">
+  <div class="hero-swiper-wrapper">
+    <swiper-container
+    [navigation]="true"
+    [slidesPerView]="1"
+    class="hero-swiper"
+    #heroSwiper
+    (afterinit)="inicializarHeroSwiper()">
+      <swiper-slide *ngFor="let item of [0, 1, 2, 3, 4]; let i = index;">
+        <div class="background-wrapper">
+          <div class="slide-background-{{i}}"></div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
+  <div class="hero-search-wrapper">
+    <div class="hero-search-content">
+      <ion-grid [fixed]="true">
+        <ion-row>
+          <ion-col size="12" size-md="8">
+            <div class="padding-lateral">
+              <ion-text>
+                <h1 class="titulo">Encontre aqui o serviço que você procura</h1>
+              </ion-text>
+          
+              <div class="search-wrapper hero">
+                <ion-input
+                mode="ios"
+                type="text"
+                placeholder="Digite aqui o serviço que você procura">
+                </ion-input>
+  
+                <ion-button
+                class="search-btn"
+                fill="solid"
+                mode="ios"
+                title="Procurar">
+                  <ion-icon name="search"></ion-icon>
+                </ion-button>
+              </div>
+
+              <div class="buscas-frequentes">
+                <ion-text>
+                  <p class="text-black"><b>Buscas frequentes</b></p>
+                </ion-text>
+                
+                <div class="mais-buscados">
+                  <ion-chip
+                  *ngFor="let item of maisBuscados"
+                  [title]="item.label"
+                  mode="ios"
+                  class="outline-white chip-principal"
+                  [outline]="true">
+                    {{ item.label }}
+                  </ion-chip>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</section>

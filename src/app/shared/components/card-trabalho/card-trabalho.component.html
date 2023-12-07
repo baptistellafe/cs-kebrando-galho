@@ -1,0 +1,34 @@
+<ion-card mode="md">
+  <ion-card-header class="ion-no-padding">
+    <img
+    [title]="tipoDeTrabalho"
+    [alt]="tipoDeTrabalho"
+    [src]="imagem" />
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item mode="ios" lines="none">
+      <ion-avatar>
+        <img
+          [title]="nomeDoProfissional + ' (sem foto)'"
+          [src]="urlDaFotoDePerfil ? urlDaFotoDePerfil : 'https://ionicframework.com/docs/img/demos/avatar.svg'"
+          alt="Perfil">
+      </ion-avatar>
+
+      <ion-text class="ion-text-start">
+        <p class="text-black titulo">{{ tipoDeTrabalho }}</p>
+        <p class="text-black nome">{{ nomeDoProfissional }}</p>
+      </ion-text>
+    </ion-item>
+
+    <ion-button
+    (click)="favoritarTrabalho($event)"
+    class="heart-btn"
+    [ngClass]="{ 'favoritado': favorito }"
+    mode="ios"
+    [title]="favorito ? 'Favoritado' : 'Favoritar'"
+    fill="clear">
+      <ion-icon [name]="'heart' + (!favorito ? '-outline' : '')"></ion-icon>
+    </ion-button>
+  </ion-card-content>
+</ion-card>

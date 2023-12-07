@@ -1,0 +1,9 @@
+ion-footer {
+  height: 68px;
+  background: var(--yellow);
+
+  ion-toolbar {
+    --min-height: 68px;
+    --background: transparent;
+  }
+}

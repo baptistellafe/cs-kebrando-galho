@@ -1,0 +1,12 @@
+section.servicos-populares {
+  height: calc(100vh - 84px);
+  background: var(--gray-bg);
+  display: flex;
+  align-items: center;
+
+  ion-grid { flex: none; }
+
+  .titulo {
+    margin-bottom: 26px;
+  }
+}

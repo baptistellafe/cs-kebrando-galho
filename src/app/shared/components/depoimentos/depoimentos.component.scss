@@ -1,0 +1,48 @@
+section.depoimentos {
+  height: calc(100vh - 87px);
+  background: var(--gray-bg);
+  display: flex;
+  align-items: center;
+
+  ion-grid { flex: none; }
+
+  .padding-lateral-largo {
+    padding: 0 42px;
+  }
+
+  .depoimentos-swiper {
+    height: 100%;
+  
+      &::part(button-next),
+      &::part(button-prev) {
+        width: 79px;
+        height: 79px;
+        color: transparent;
+        background: url('./../../../../assets/images/backgrounds/seta-direita-laranja-escuro.png') no-repeat center center;
+        background-size: cover;
+      }
+
+      &::part(button-prev) {
+        transform: rotate(180deg) translateY(16px);
+      }
+  }
+
+  .depoimento-conteudo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 32px;
+  }
+
+  .banner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}

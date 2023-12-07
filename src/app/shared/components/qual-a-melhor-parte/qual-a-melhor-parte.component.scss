@@ -1,0 +1,40 @@
+section.qual-a-melhor-parte {
+  height: 60vh;
+  background: var(--gray-solid);
+  padding: 42px 0;
+
+  .melhor-parte-conteudo {
+    padding: 16px 16px 0 0;
+    
+    ion-list {
+      ion-item {
+        --inner-padding-end: 0;
+        --padding-start: 0;
+  
+        div.item-description {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+  
+          img {
+            margin: 0 16px 0 0;
+          }
+        }
+  
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .melhor-parte-banner {
+    width: 100%;
+    text-align: right;
+
+    img {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+}

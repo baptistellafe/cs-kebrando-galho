@@ -1,0 +1,46 @@
+section.trabalhos-feitos {
+  height: auto;
+  background: var(--gray-bg);
+
+  .posicao-do-ver-mais {
+    text-align: right;
+
+    @media only screen and (max-width: 576px) {
+      text-align: left;
+    }
+  }
+
+  ion-grid.esticar-no-mobile.grid-fixed {
+    @media only screen and (max-width: 576px) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .trabalhos-feitos-swiper-wrapper {
+    width: 100%;
+
+    .trabalhos-feitos-swiper {
+      height: 100%;
+
+      &::part(button-next),
+      &::part(button-prev) {
+        width: 60px;
+        height: 60px;
+        color: transparent;
+        background: url('./../../../../assets/images/backgrounds/seta-direita-laranja-claro.png') no-repeat center center;
+        background-size: cover;
+      }
+
+      &::part(button-prev) {
+        left: 0;
+        transform: rotate(180deg);
+      }
+
+      &::part(button-next) {
+        right: 0;
+      }
+      
+    }
+  } 
+}

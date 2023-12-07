@@ -1,0 +1,44 @@
+<section class="servicos-populares">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col size="12">
+        <h2 class="titulo"><b>Serviços populares</b></h2>
+      </ion-col>
+      
+      <ion-col size="12">
+        <div class="servicos-populares-swiper">
+          <swiper-container
+          [centeredSlides]="true"
+          [spaceBetween]="16"
+          [navigation]="true"
+          [slidesPerView]="2"
+          class="hero-swiper"
+          #heroSwiper
+          [breakpoints]="{
+            '576': {
+              slidesPerView: '2',
+              centeredSlides: true
+            },
+            '767': {
+              slidesPerView: '3',
+              centeredSlides: false
+            },
+            '991': {
+              slidesPerView: '3.4',
+              centeredSlides: false
+            },
+            '1200': {
+              slidesPerView: '4',
+              centeredSlides: false
+            }
+          }"
+          (afterinit)="inicializarServicosPopularesSwiper()">
+            <swiper-slide *ngFor="let item of servicosPopulares; let i = index;">
+              <kg-card-popular [servico]="item.servico"></kg-card-popular>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</section>

@@ -1,0 +1,69 @@
+<section class="trabalhos-feitos">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col size="12">
+        <ion-text>
+          <h2><b>Trabalhos feitos pelos profissionais do Kebrando Galho</b></h2>
+        </ion-text>
+      </ion-col>
+
+      <ion-col size="12" class="posicao-do-ver-mais">
+        <ion-button
+        [routerLink]="['/trabalhos-feitos']" 
+        class="ion-no-padding clear-amarelo"
+        title="Ver mais"
+        mode="ios"
+        fill="clear">
+          Ver mais
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid [fixed]="true" class="esticar-no-mobile">
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-no-padding">
+        <ion-col size="12">
+          <div class="trabalhos-feitos-swiper-wrapper">
+            <swiper-container
+            [centeredSlides]="true"
+            [spaceBetween]="22"
+            [navigation]="true"
+            [slidesPerView]="2"
+            class="trabalhos-feitos-swiper"
+            #trabalhosFeitosSwiper
+            [breakpoints]="{
+              '576': {
+                slidesPerView: '2',
+                centeredSlides: true
+              },
+              '767': {
+                slidesPerView: '3',
+                centeredSlides: false
+              },
+              '991': {
+                slidesPerView: '3.4',
+                centeredSlides: false
+              },
+              '1200': {
+                slidesPerView: '4',
+                centeredSlides: false
+              }
+            }"
+            (afterinit)="inicializarServicosPopularesSwiper()">
+              <swiper-slide *ngFor="let card of cards; let i = index;">
+                <kg-card-trabalho
+                [imagem]="card.imagem"
+                [tipoDeTrabalho]="card.tipoDeTrabalho"
+                [nomeDoProfissional]="card.nomeDoProfissional"
+                [favorito]="card.favorito"
+                [urlDaFotoDePerfil]="card.urlDaFotoDePerfil">
+                </kg-card-trabalho>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</section>

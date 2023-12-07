@@ -1,0 +1,73 @@
+section.cadastrar-servicos {
+  background: var(--gray-bg);
+  padding: 120px 0 150px 0;
+
+  @media only screen and (max-width: 991px) {
+    padding: 0;
+  }
+
+  ion-grid,
+  ion-row,
+  ion-col {
+    height: 100%;
+  }
+
+  .cadastrar-servicos-wrapper {
+    height: 300px;
+    background: var(--dark-blue);
+
+    @media only screen and (max-width: 767px) {
+      height: auto;
+      padding: 32px 16px;
+    }
+
+    .cadastrar-servicos-fotos {
+      position: relative;
+
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+      }
+
+      img {
+        position: absolute;
+        top: -55px;
+        left: 0;
+
+        @media only screen and (max-width: 1199px) {
+          top: -25px;
+        }
+
+        @media only screen and (max-width: 991px) {
+          top: 17px;
+        }
+
+        @media only screen and (max-width: 767px) {
+          position: relative;
+          top: auto;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .cadastrar-servicos-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .cadastrar-texto {
+        @media only screen and (max-width: 991px) {
+          font-size: 14px;
+          margin-top: 16px;
+        }
+      }
+
+      .cadastrar-btn {
+        @media only screen and (max-width: 991px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

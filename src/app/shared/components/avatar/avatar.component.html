@@ -1,0 +1,23 @@
+<ion-avatar
+(click)="toggleMenu('perfil')"
+[ngClass]="corDaBorda"
+mode="ios">
+  <!-- [USUÁRIO LOGADO] -->
+  <ng-container *ngIf="usuarioLogado">
+    <img
+    alt="Perfil"
+    [title]="arrobaDoUsuario ? ('@' + arrobaDoUsuario) : '@visitante'"
+    [src]="urlDaFoto ? urlDaFoto : 'https://ionicframework.com/docs/img/demos/avatar.svg'" />
+
+    <span class="status online"></span>
+  </ng-container>
+
+  <!-- [USUÁRIO DESLOGADO] -->
+  <ng-container *ngIf="!usuarioLogado">
+    <div class="logado">
+      <ion-text mode="ios">
+        <p>@</p>
+      </ion-text>
+    </div>
+  </ng-container>
+</ion-avatar>

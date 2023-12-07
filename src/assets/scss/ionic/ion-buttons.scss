@@ -1,0 +1,19 @@
+ion-button {
+  &.clear-amarelo {
+    --color: var(--yellow);
+  }
+
+  &.solid-white-text-orange {
+    --background: var(--white);
+    --color: var(--orange);
+  }
+
+  &.solid-yellow-text-white {
+    --background: var(--yellow);
+    --color: var(--white);
+  }
+
+  &.ion-no-text-transform {
+    text-transform: none !important;
+  }
+}

@@ -1,0 +1,35 @@
+<section class="qual-a-melhor-parte">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col size="12">
+        <h2 class="titulo"><b>Qual a melhor parte? Tudo!</b></h2>
+      </ion-col>
+
+      <ion-col size="12" size-lg="6">
+        <div class="melhor-parte-conteudo">
+          <ion-list mode="md" lines="none" class="bg-transparent">
+            <ion-item *ngFor="let item of items" mode="md" class="ion-bg-transparent">
+              <div class="item-description">
+                <img src="./../../../../assets/images/backgrounds/checkmark-dark.png" alt="check">
+                <ion-text mode="md">
+                  <p class="titulo fs-20">
+                    <b>{{ item.title }}</b>
+                  </p>
+                  <p *ngFor="let text of item.texts" class="descricao fs-16">
+                    {{ text }}
+                  </p>
+                </ion-text>
+              </div>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+
+      <ion-col size="6" class="ion-hide-lg-down">
+        <div class="melhor-parte-banner">
+          <img src="./../../../../assets/images/backgrounds/melhor-parte.png" alt="melhor parte" alt="A melhor parte">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</section>

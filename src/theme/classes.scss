@@ -1,0 +1,42 @@
+
+// IONIC BACKGROUNDS
+.ion-bg-white { --background: var(--white); }
+
+// BACKGROUNDS
+.bg-white { background: var(--white); }
+
+// UTILIDADES
+.no-padding { padding: 0; }
+
+// TEXTOS
+.fs-18 { font-size: 18px; }
+.fs-16 { font-size: 16px; }
+.fs-14 { font-size: 14px; }
+
+// LINKS
+.kg-link-menu {
+  color: var(--yellow);
+  transition: all 200ms ease;
+  text-decoration: none;
+
+  &:Hover {
+    opacity: .7;
+    text-decoration: underline;
+  }
+}
+
+// BOTÕES
+.kg-btn-black {
+  --background: var(--stroke);
+}
+
+.kg-btn-black-clear { --color: var(--text); }
+.btn-black-clear { color: var(--text); }
+
+// ESPAÇAMENTO INTERNO
+.no-ion-padding {
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-end: 0;
+  --padding-start: 0;
+}

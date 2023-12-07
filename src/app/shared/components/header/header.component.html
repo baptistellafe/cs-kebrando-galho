@@ -1,0 +1,121 @@
+<ion-header
+mode="ios"
+class="ion-no-border bg-white">
+  <ion-toolbar
+  mode="ios"
+  class="ion-bg-white">
+    <ion-grid
+    [fixed]="true"
+    class="ion-no-padding">
+      <ion-row>
+        <ion-col
+        size="12"
+        class="ion-no-padding">
+          <header class="kg-header-geral ion-padding">
+            <!-- BOTÃO MENU -->
+            <div class="botao-do-menu ion-hide-md-up">
+              <ion-menu-button
+              mode="ios"
+              class="kg-btn-black-clear"/>
+            </div>
+
+            <!-- LOGO -->
+            <div class="logotipo">
+              <a
+              title="Kebrando Galho - O serviço ideal a um clique"
+              [routerLink]="['/inicio']"
+              href="javascript:void(0)">
+                <img
+                src="./../../../../assets/images/kebrando-galho-logo.png"
+                alt="logotipo"
+                title="Kebrando Galho - O serviço ideal a um clique">
+                </a>
+            </div>
+
+            <!-- [USUÁRIO LOGADO] -->
+            <ng-container *ngIf="!usuarioLogado">
+
+              <!-- NAVEGAÇÃO -->
+              <div class="navegacao">
+                <ul>
+                  <li *ngFor="let item of opcoesDoMenu">
+                    <a
+                    [routerLink]="item.href"
+                    href="javascript:void(0)"
+                    [title]="item.title"
+                    class="fs-18 kg-link-menu">
+                      {{ item.text }}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- BOTÕES -->
+              <div class="botoes">
+                <ion-button
+                [routerLink]="['/acessar-conta']"
+                mode="md"
+                title="Entrar"
+                fill="solid"
+                class="entrar fs-14 kg-btn-black">
+                  Entrar
+                </ion-button>
+
+                <ion-button
+                [routerLink]="['/criar-conta']"
+                mode="md"
+                title="Cadastre-se"
+                fill="clear"
+                class="cadastrar fs-14 kg-btn-black-clear ion-hide-md-down">
+                  Cadastre-se
+                </ion-button>
+              </div>
+            </ng-container>
+
+            <!-- [USUÁRIO DESLOGADO] -->
+            <ng-container *ngIf="usuarioLogado">
+              <!-- ÍCONES -->
+              <div class="icones">
+                <ion-button
+                *ngFor="let item of icones; let i = index;"
+                [routerLink]="item.href"
+                mode="ios"
+                fill="clear"
+                title="Sininho"
+                class="kg-btn-black-clear no-ion-padding"
+                (mouseover)="iconeSelecionado = i"
+                (mouseout)="iconeSelecionado = undefined">
+                  <ion-icon [name]="item.icon + (i === iconeSelecionado ? '' : '-outline')"></ion-icon>
+                </ion-button>
+              </div>
+
+              <!-- USUARIO E LOGOUT -->
+              <div class="user-logout">
+                <ion-text mode="ios">
+                  <p>@User</p>
+                </ion-text>
+
+                <ion-button
+                (click)="mostrarAlertaSairDaConta()"
+                mode="ios"
+                title="Sair"
+                fill="clear"
+                class="no-ion-padding">
+                  Sair
+                </ion-button>
+              </div>
+
+              <div class="avatar">
+                <kg-avatar
+                [corDaBorda]="'yellow-border'"
+                [usuarioLogado]="usuarioLogado"
+                [arrobaDoUsuario]="arrobaDoUsuario"
+                [urlDaFoto]="urlDaFoto"/>
+              </div>
+            </ng-container>
+          </header>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>

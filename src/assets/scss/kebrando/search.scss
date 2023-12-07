@@ -1,0 +1,37 @@
+.search-wrapper {
+  border: 1px solid var(--orange);
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+
+  ion-input {
+    --background: var(--white);
+    --height: 100%;
+    --min-height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    margin: 0;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --inner-padding-end: 0;
+    --placeholder-color: var(--gray-text);
+
+    .input-wrapper.sc-ion-input-ios {
+      height: 100%;
+    }
+  }
+
+  ion-button {
+    &.search-btn {
+      --border-radius: 0;
+      margin: 0;
+      --background: var(--orange);
+      --color: var(--white);
+    }
+  }
+
+  &.hero {
+    width: 100%;
+    max-width: 500px
+  }
+}

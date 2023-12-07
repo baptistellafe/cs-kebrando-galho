@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  padding: 2px;
+
+  ion-card {
+    height: 341px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+    ion-card-header {
+      padding: 0;
+
+      img {
+        margin: 0;
+      }
+    }
+
+    ion-card-content {
+      width: 100%;
+      flex: 1;
+      padding-top: 10px;
+    
+
+      &.card-content-md p {
+        line-height: 22px;
+
+        &.titulo { font-size: 18px; }
+        &.nome { font-size: 16px; font-weight: 300; }
+      }
+
+      ion-item {
+        --inner-padding-end: 0;
+        --padding-start: 0;
+
+        ion-avatar {
+          margin: 0 16px 0 0;
+        }
+      }
+
+      ion-text { flex: 1;  width: 100%; }
+
+      ion-button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        margin: 0;
+        --color: var(--gray-text);
+        --color-hover: var(--danger);
+
+        // VISUAL DO BOTÃO FAVORITADO.
+        &.favoritado {
+          --color: var(--danger);
+        }
+      }
+    }
+  }
+}

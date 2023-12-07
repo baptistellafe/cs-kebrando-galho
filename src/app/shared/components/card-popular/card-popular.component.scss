@@ -1,0 +1,19 @@
+ion-card {
+  height: 341px;
+  margin: 10px 0;
+
+  ion-card-content {
+    img {
+      transform: scale(1.5);
+    }
+  }
+
+  ion-card-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, .5)
+  }
+}

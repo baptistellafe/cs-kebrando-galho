@@ -1,0 +1,39 @@
+<ion-split-pane
+[when]="false"
+contentId="conteudo-principal">
+  <!-- MENU DO KEBRANDO GALHO -->
+  <ion-menu
+  contentId="conteudo-principal"
+  side="start"
+  menuId="nav">
+    <ion-content class="ion-padding">
+      Nav
+    </ion-content>
+  </ion-menu>
+
+  <!-- MENU DO PERFIL LOGADO -->
+  <ion-menu
+  contentId="conteudo-principal"
+  side="end"
+  menuId="perfil">
+    <ion-content class="ion-padding">
+      Perfil
+    </ion-content>
+  </ion-menu>
+
+  <!-- CONTEÚDO DO KEBRANDO GALHO -->
+  <div
+  class="ion-page"
+  id="conteudo-principal">
+    <!-- HEADER GLOBAL -->
+    <kg-header
+    [usuarioLogado]="usuarioLogado"
+    [arrobaDoUsuario]="arrobaDoUsuario"
+    [urlDaFoto]="urlDaFoto" />
+
+    <!-- CONTEÚDO -->
+    <ion-content class="ion-padding">
+      <ion-router-outlet></ion-router-outlet>
+    </ion-content>
+  </div>
+</ion-split-pane>

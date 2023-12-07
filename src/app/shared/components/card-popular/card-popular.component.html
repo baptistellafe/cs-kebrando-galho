@@ -1,0 +1,20 @@
+<ion-card>
+  <ion-card-content class="ion-no-padding">
+    <img
+    [alt]="servico"
+    [src]="'./../../../../assets/images/servicos/' + servico + '.png'" />
+  </ion-card-content>
+
+  <ion-card-footer>
+    <ion-text>
+      <p class="text-black text-uppercase fs-18">
+        <ng-container [ngSwitch]="servico">
+          <ng-container *ngSwitchCase="'pinturas-em-geral'">Pinturas em geral</ng-container>
+          <ng-container *ngSwitchCase="'assistencia-tecnica'">Assis. Técnica</ng-container>
+          <ng-container *ngSwitchCase="'mecanica'">Mecânica</ng-container>
+          <ng-container *ngSwitchCase="'obras-e-reparos'">Obras e reparos</ng-container>
+        </ng-container>
+      </p>
+    </ion-text>
+  </ion-card-footer>
+</ion-card>

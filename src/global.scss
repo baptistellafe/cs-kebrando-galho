@@ -1,0 +1,107 @@
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+@import "./assets/scss/ionic/ion-buttons.scss";
+@import "./assets/scss/ionic/ion-chip.scss";
+
+@import "./assets/scss/kebrando/search.scss";
+
+/** CONFIGURAÇÃO GLOBAL DO KG **/
+ion-toolbar {
+  --padding-top: 0;
+  --padding-end: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --min-height: 0;
+}
+
+// LISTAS
+ul { list-style: none; padding: 0; }
+
+// TEXTOS
+p { margin: 0; }
+
+// TÍTULOS
+h2, h3, h4 { margin: 0; }
+
+// BOTÓES
+ion-button { height: auto; min-height: auto; }
+
+// ALERTS
+ion-alert.kg-alert {
+  .alert-head.sc-ion-alert-ios {
+    padding: 16px 16px 0 16px;
+  }
+
+  .alert-title.sc-ion-alert-ios { color: var(--text); }
+  .alert-sub-title.sc-ion-alert-ios { color: var(--text); font-size: 14px; }
+  .alert-message.sc-ion-alert-ios { color: var(--gray); padding: 8px 16px 16px 16px; }
+  .alert-button.sc-ion-alert-ios {
+    &.alert-button-role-cancel {
+      color: var(--text);
+      opacity: .8;
+    }
+
+    &.alert-button-role-confirm {
+      color: var(--orange);
+    }
+  }
+}
+
+// DISPLAYS
+.d-block { display: block}
+
+// SIZES
+.w-100 { width: 100%; }
+
+// TEXT COLORS
+.text-white { color: var(--white); }
+.text-black { color: var(--black); }
+
+// IONIC BACKGROUNDS
+.ion-bg-transparent { --background: transparent; }
+
+// BACKGROUNDS
+.bg-transparent { background: transparent; }
+
+// FONTS
+.fs-30 { font-size: 30px; }
+.fs-25 { font-size: 25px; }
+.fs-22 { font-size: 22px; }
+.fs-20 { font-size: 20px; }
+.fs-18 { font-size: 18px; }
+.fs-16 { font-size: 16px; }
+
+// MARGENS
+.mg-bt-8 { margin-bottom: 8px; }
+.mg-top-18 { margin-top: 18px; }
+
+// WEIGHT
+.font-weight-300 { font-weight: 300; }
+
+// TRANSFORM
+.text-uppercase { text-transform: uppercase;}
+
+// GRID
+ion-grid {
+  --ion-grid-padding: 8px;
+
+  ion-col { --ion-grid-column-padding: 8px; }
+}
+
+body, html {
+  height: 100%;
+}
