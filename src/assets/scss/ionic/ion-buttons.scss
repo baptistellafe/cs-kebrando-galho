@@ -8,12 +8,21 @@ ion-button {
     --color: var(--orange);
   }
 
-  &.solid-yellow-text-white {
-    --background: var(--yellow);
+  &.solid-yellow-middle-white {
+    --background: var(--yellow-middle);
     --color: var(--white);
   }
 
   &.ion-no-text-transform {
     text-transform: none !important;
+  }
+
+  &.solid-yellow-light-text-white {
+    --background: var(--yellow-light);
+    --color: var(--white);
+  }
+
+  &.criar-conta {
+    --border-radius: 10px;
   }
 }

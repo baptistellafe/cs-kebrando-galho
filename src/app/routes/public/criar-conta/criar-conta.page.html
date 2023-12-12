@@ -1,13 +1,57 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>criar-conta</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content
+[fullscreen]="true">
+  <section class="criar-conta">
+    <div class="criar-conta-imagem">
+      <img
+      src="./../../../../assets/images/backgrounds/criar-conta.png"
+      alt="">
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">criar-conta</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="criar-conta-form-wrapper">
+      <ion-grid [fixed]="true" [formGroup]="formularioDeCadastro">
+        <ion-row>
+          <ion-col size="12">
+            <ion-text>
+              <h2 class="titulo text-white fs-35"><b>Criar uma nova conta</b></h2>
+            </ion-text>
+
+            <form class="grupo-de-inputs">
+              <ion-input
+              type="text"
+              inputmode="text"
+              placeholder="Digite seu e-mail"
+              mode="ios"
+              class="cs-default-input">
+              </ion-input>
+
+              <ion-input
+              type="text"
+              inputmode="text"
+              placeholder="Digite uma senha"
+              mode="ios"
+              class="cs-default-input">
+              </ion-input>
+
+              <ion-input
+              type="text"
+              inputmode="text"
+              placeholder="Repita a senha"
+              mode="ios"
+              class="cs-default-input">
+              </ion-input>
+            </form>
+          </ion-col>
+
+          <ion-col>
+            <ion-button
+            size="lg"
+            mode="md"
+            class="criar-conta solid-yellow-light-text-white fs-18">
+              Criar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </section>
 </ion-content>

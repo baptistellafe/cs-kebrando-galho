@@ -1,0 +1,10 @@
+ion-input {
+  &.cs-default-input {
+    --border-radius: 10px;
+    --background: var(--white);
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --inner-padding-end: 0;
+    --placeholder-color: rgba(0, 0, 0, .5);
+  }
+}
