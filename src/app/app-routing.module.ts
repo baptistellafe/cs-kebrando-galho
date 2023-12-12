@@ -42,11 +42,11 @@ const routes: Routes = [
   {
     path: 'mensagens',
     loadChildren: () => import('./routes/private/mensagens/mensagens.module').then( m => m.MensagensPageModule)
-  },  {
+  },
+  {
     path: 'trabalhos-feitos',
     loadChildren: () => import('./routes/public/trabalhos-feitos/trabalhos-feitos.module').then( m => m.TrabalhosFeitosPageModule)
-  },
-
+  }
 ];
 
 @NgModule({

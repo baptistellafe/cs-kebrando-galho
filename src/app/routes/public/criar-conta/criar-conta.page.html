@@ -1,57 +1,97 @@
 <ion-content
 [fullscreen]="true">
   <section class="criar-conta">
-    <div class="criar-conta-imagem">
+    <div class="criar-conta-imagem ion-hide-md-down">
       <img
+      class="Background"
       src="./../../../../assets/images/backgrounds/criar-conta.png"
-      alt="">
+      alt="imagem">
     </div>
 
     <div class="criar-conta-form-wrapper">
-      <ion-grid [fixed]="true" [formGroup]="formularioDeCadastro">
-        <ion-row>
-          <ion-col size="12">
-            <ion-text>
-              <h2 class="titulo text-white fs-35"><b>Criar uma nova conta</b></h2>
-            </ion-text>
-
-            <form class="grupo-de-inputs">
-              <ion-input
-              type="text"
-              inputmode="text"
-              placeholder="Digite seu e-mail"
-              mode="ios"
-              class="cs-default-input">
-              </ion-input>
-
-              <ion-input
-              type="text"
-              inputmode="text"
-              placeholder="Digite uma senha"
-              mode="ios"
-              class="cs-default-input">
-              </ion-input>
-
-              <ion-input
-              type="text"
-              inputmode="text"
-              placeholder="Repita a senha"
-              mode="ios"
-              class="cs-default-input">
-              </ion-input>
-            </form>
-          </ion-col>
-
-          <ion-col>
-            <ion-button
-            size="lg"
-            mode="md"
-            class="criar-conta solid-yellow-light-text-white fs-18">
-              Criar
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <ion-content
+      class="ion-bg-transparent"
+      [forceOverscroll]="false">
+        <ion-grid [fixed]="true">
+          <ion-row>
+            <ion-col size="12">
+              <ion-text>
+                <h2 class="titulo text-white fs-35"><b>Criar uma nova conta</b></h2>
+              </ion-text>
+  
+              <form class="grupo-de-inputs" [formGroup]="formularioDeCadastro">
+                <ion-input
+                formControlName="email"
+                type="text"
+                inputmode="text"
+                placeholder="Digite seu e-mail"
+                mode="ios"
+                class="cs-default-input">
+                </ion-input>
+  
+                <ion-input
+                formControlName="senha"
+                type="text"
+                inputmode="text"
+                placeholder="Digite uma senha"
+                mode="ios"
+                class="cs-default-input">
+                </ion-input>
+  
+                <ion-input
+                formControlName="confirmarSenha"
+                type="text"
+                inputmode="text"
+                placeholder="Repita a senha"
+                mode="ios"
+                class="cs-default-input">
+                </ion-input>
+              </form>
+            </ion-col>
+  
+            <ion-col size="12" size-lg="6">
+              <ion-button
+              title="Criar"
+              size="lg"
+              mode="md"
+              class="criar-conta solid-white-text-black fs-14 fw-normal w-100">
+                <img
+                class="mg-right-6"
+                title="Entrar com apple"
+                src="./../../../../assets/images/icones/google.png"
+                alt="google"> 
+                Entrar com apple
+              </ion-button>
+            </ion-col>
+  
+            <ion-col size="12" size-lg="6">
+              <ion-button
+              title="Criar"
+              size="lg"
+              mode="md"
+              class="criar-conta solid-white-text-black fs-14 fw-normal w-100">
+                <img
+                class="mg-right-6"
+                title="Entrar com google"
+                src="./../../../../assets/images/icones/apple.png"
+                alt="apple">
+                Entrar com google
+              </ion-button>
+            </ion-col>
+  
+            <ion-col size="12" class="ion-text-end">
+              <ion-button
+              [disabled]="formularioDeCadastro.invalid"
+              title="Criar"
+              size="lg"
+              mode="md"
+              class="criar-conta solid-yellow-light-text-white fs-16">
+                Criar
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
     </div>
   </section>
 </ion-content>

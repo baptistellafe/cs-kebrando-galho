@@ -15,14 +15,13 @@ export class CriarContaPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.criarFormDeCadastro();
   }
 
   public criarFormDeCadastro(): void {
     this.formularioDeCadastro = this.fb.group({
       email: [ null, [ Validators.required, Validators.email ] ],
       senha: [ null, [ Validators.required ] ],
-      confirmarSenha: [ null, [ Validators.required ] ]
+      confirmarSenha: [ null, [ Validators.required, Validators.email ] ]
     })
   }
 

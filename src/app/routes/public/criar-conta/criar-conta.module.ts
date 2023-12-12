@@ -14,8 +14,8 @@ import { CriarContaPage } from './criar-conta.page';
     FormsModule,
     IonicModule,
     CriarContaPageRoutingModule,
-    ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [CriarContaPage]
 })
