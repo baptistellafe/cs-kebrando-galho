@@ -8,20 +8,20 @@ section {
     overflow: hidden;
 
     .criar-conta-imagem {
-      background: var(--yellow-light);
+      background: #EDEFEE;
       height: 100%;
       width: 50%;
       display: flex;
-      justify-content: flex-start;
+      justify-content: flex-end;
       align-items: flex-end;
 
       img {
-        margin-left: -30px;
+        margin-right: -180px;
       }
     }
 
     .criar-conta-form-wrapper {
-      background: var(--orange);
+      background: var(--yellow);
       height: 100%;
       width: 50%;
       display: flex;

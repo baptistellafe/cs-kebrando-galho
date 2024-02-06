@@ -4,18 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CriarContaPageRoutingModule } from './criar-conta-routing.module';
+import { RecuperarSenhaPageRoutingModule } from './recuperar-senha-routing.module';
 
-import { CriarContaPage } from './criar-conta.page';
+import { RecuperarSenhaPage } from './recuperar-senha.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CriarContaPageRoutingModule,
+    RecuperarSenhaPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [CriarContaPage]
+  declarations: [RecuperarSenhaPage]
 })
-export class CriarContaPageModule {}
+export class RecuperarSenhaPageModule {}

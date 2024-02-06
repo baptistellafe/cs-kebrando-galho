@@ -14,7 +14,6 @@ import { AcessarContaPage } from './acessar-conta.page';
     FormsModule,
     IonicModule,
     AcessarContaPageRoutingModule,
-    FormsModule,
     ReactiveFormsModule
   ],
   declarations: [AcessarContaPage]

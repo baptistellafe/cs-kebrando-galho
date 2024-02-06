@@ -46,7 +46,11 @@ const routes: Routes = [
   {
     path: 'trabalhos-feitos',
     loadChildren: () => import('./routes/public/trabalhos-feitos/trabalhos-feitos.module').then( m => m.TrabalhosFeitosPageModule)
+  },  {
+    path: 'recuperar-senha',
+    loadChildren: () => import('./routes/public/recuperar-senha/recuperar-senha.module').then( m => m.RecuperarSenhaPageModule)
   }
+
 ];
 
 @NgModule({

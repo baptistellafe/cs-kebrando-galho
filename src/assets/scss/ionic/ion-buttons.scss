@@ -13,6 +13,11 @@ ion-button {
     --color: var(--black);
   }
 
+  &.solid-black-text-white {
+    --background: var(--black);
+    --color: var(--white);
+  }
+
   &.solid-yellow-middle-white {
     --background: var(--yellow-middle);
     --color: var(--white);
@@ -29,5 +34,10 @@ ion-button {
 
   &.criar-conta {
     --border-radius: 10px;
+  }
+
+  &.solid-yellow-text-white {
+    --background: var(--yellow);
+    --color: var(--white);
   }
 }

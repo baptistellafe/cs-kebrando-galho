@@ -4,7 +4,7 @@
     <div class="criar-conta-imagem ion-hide-md-down">
       <img
       class="Background"
-      src="./../../../../assets/images/backgrounds/criar-conta.png"
+      src="./../../../../assets/images/backgrounds/login.png"
       alt="imagem">
     </div>
 
@@ -16,13 +16,15 @@
           <ion-row>
             <ion-col size="12">
               <ion-text>
-                <h2 class="titulo text-white fs-35"><b>Criar uma nova conta</b></h2>
+                <h2 class="titulo text-white fs-35"><b>Entre na sua conta</b></h2>
               </ion-text>
   
-              <form class="grupo-de-inputs" [formGroup]="formularioDeCadastro">
+              <form
+              class="grupo-de-inputs"
+              [formGroup]="formularioDeCadastro">
                 <ion-input
-                formControlName="email"
-                type="text"
+                [formControlName]="'email'"
+                type="email"
                 inputmode="text"
                 placeholder="Digite seu e-mail"
                 mode="ios"
@@ -30,19 +32,10 @@
                 </ion-input>
   
                 <ion-input
-                formControlName="senha"
+                [formControlName]="'senha'"
                 type="text"
                 inputmode="text"
-                placeholder="Digite uma senha"
-                mode="ios"
-                class="cs-default-input">
-                </ion-input>
-  
-                <ion-input
-                formControlName="confirmarSenha"
-                type="text"
-                inputmode="text"
-                placeholder="Repita a senha"
+                placeholder="Digite sua senha"
                 mode="ios"
                 class="cs-default-input">
                 </ion-input>
@@ -60,7 +53,7 @@
                 title="Entrar com apple"
                 src="./../../../../assets/images/icones/google.png"
                 alt="google"> 
-                Entrar com apple
+                Entrar com login
               </ion-button>
             </ion-col>
   
@@ -72,10 +65,10 @@
               class="criar-conta solid-white-text-black fs-14 fw-normal w-100">
                 <img
                 class="mg-right-6"
-                title="Entrar com google"
+                title="Entrar com apple"
                 src="./../../../../assets/images/icones/apple.png"
                 alt="apple">
-                Entrar com google
+                Entrar com apple
               </ion-button>
             </ion-col>
   
@@ -85,7 +78,7 @@
               title="Criar"
               size="lg"
               mode="md"
-              class="criar-conta solid-yellow-light-text-white fs-16">
+              class="criar-conta solid-black-text-white fs-16">
                 Criar
               </ion-button>
             </ion-col>

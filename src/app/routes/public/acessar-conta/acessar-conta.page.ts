@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'kg-acessar-conta',
@@ -11,18 +12,23 @@ export class AcessarContaPage implements OnInit {
   public formDeLogin: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private title : Title
   ) { }
 
   ngOnInit() {
     this.criarFormDeLogin();
   }
 
+  ionViewWillEnter() {
+    this.title.setTitle('Acesse sua conta - Kebrando Galho');
+  }
+
   public criarFormDeLogin(): void {
     this.formDeLogin = this.fb.group({
-      email: [ null, [ Validators.required, Validators.email ] ],
-      senha: [ null, [ Validators.required ] ],
-      confirmarSenha: [ null, [ Validators.required ] ]
+      emailLogin: [ null, [ Validators.required, Validators.email ] ],
+      senhaLogin: [ null, [ Validators.required ] ],
+      confirmarSenhaLogin: [ null, [ Validators.required ] ]
     })
   }
 
