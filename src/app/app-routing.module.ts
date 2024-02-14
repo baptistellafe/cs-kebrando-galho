@@ -46,9 +46,14 @@ const routes: Routes = [
   {
     path: 'trabalhos-feitos',
     loadChildren: () => import('./routes/public/trabalhos-feitos/trabalhos-feitos.module').then( m => m.TrabalhosFeitosPageModule)
-  },  {
+  },
+  {
     path: 'recuperar-senha',
     loadChildren: () => import('./routes/public/recuperar-senha/recuperar-senha.module').then( m => m.RecuperarSenhaPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./routes/private/perfil/perfil.module').then( m => m.PerfilPageModule)
   }
 
 ];
