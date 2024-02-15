@@ -1,0 +1,77 @@
+ion-content {
+  section {
+    &.conta-criada {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      ion-grid {
+         flex: none;
+      }
+
+      .conta-criada-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .max-text {
+          max-width: 70%;
+        }
+      }
+    }
+  }
+}
+
+.tipo-de-usuario {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 32px 0 0 0;
+
+  @media only screen and (max-width: 769px) {
+    flex-direction: column;
+  }
+
+  ion-item {
+    width: 332px;
+    --border-width: 1px;
+    --border-style: solid;
+    --border-color: var(--gray-border);
+    border-radius: 10px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --inner-padding-end: 0;
+
+    &::part(native) {
+      border-radius: 10px;
+    }
+
+    &.prestador {
+      margin: 0 16px 0 0;
+
+      @media only screen and (max-width: 769px) {
+        margin: 0 0 16px 0;
+      }
+    }
+
+    &.cliente {
+      margin: 0 0 0 16px;
+
+      @media only screen and (max-width: 769px) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+ion-checkbox {
+  --checkmark-color: var(--checkbox-mark);
+  --checkbox-background-checked: transparent;
+}
+
+ion-checkbox::part(container) {
+  border: 1px solid var(--gray-border);
+}

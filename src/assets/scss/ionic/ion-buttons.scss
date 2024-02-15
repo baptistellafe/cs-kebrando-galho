@@ -40,4 +40,9 @@ ion-button {
     --background: var(--yellow);
     --color: var(--white);
   }
+
+  &.clear-gray-light {
+    --color: var(--light-gray-text);
+  }
+  
 }

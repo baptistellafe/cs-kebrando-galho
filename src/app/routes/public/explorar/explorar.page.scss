@@ -1,0 +1,24 @@
+section {
+  &.explorar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+
+    ion-grid {
+      flex: none;
+    }
+  }
+}
+
+.explorar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .explorar-btn {
+    width: 213px;
+    margin: 42px 0;
+  }
+}

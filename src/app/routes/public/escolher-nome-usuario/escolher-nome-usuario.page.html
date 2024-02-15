@@ -1,14 +1,14 @@
 <ion-content
 [fullscreen]="true">
-  <section class="recuperar-senha">
-    <div class="recuperar-senha-imagem ion-hide-md-down">
+  <section class="nome-de-usuario">
+    <div class="nome-de-usuario-imagem ion-hide-md-down">
       <img
       class="Background"
       src="./../../../../assets/images/backgrounds/login.png"
       alt="imagem">
     </div>
 
-    <div class="recuperar-senha-form-wrapper">
+    <div class="nome-de-usuario-form-wrapper">
       <ion-content
       class="ion-bg-transparent"
       [forceOverscroll]="false">
@@ -16,18 +16,17 @@
           <ion-row>
             <ion-col size="12">
               <ion-text>
-                <h2 class="titulo text-white fs-35"><b>Esqueceu a senha?</b></h2>
-                <p class="text-white fs-16">Já tem conta? <a href="javascript:void(0)" class="text-white" [routerLink]="['/acessar-conta']" title="acessar conta" routerLinkActive="router-link-active" ><b>Entrar</b></a></p>
+                <h2 class="titulo text-white fs-35"><b>Escolha seu nome de usuário</b></h2>
               </ion-text>
   
               <form
               class="grupo-de-inputs"
-              [formGroup]="formularioRecuperacao">
+              [formGroup]="formularioUsuario">
                 <ion-input
-                [formControlName]="'email'"
-                type="email"
+                [formControlName]="'nomeDeUsuario'"
+                type="text"
                 inputmode="text"
-                placeholder="Digite seu e-mail"
+                placeholder="Digite seu usuário"
                 mode="ios"
                 class="cs-default-input">
                 </ion-input>
@@ -36,12 +35,12 @@
   
             <ion-col size="12" class="ion-text-end">
               <ion-button
-              [disabled]="formularioRecuperacao.invalid"
+              [disabled]="formularioUsuario.invalid"
               title="Criar"
               size="lg"
               mode="md"
               class="criar-conta solid-yellow-text-white fs-16">
-                Enviar
+                Criar
               </ion-button>
             </ion-col>
           </ion-row>

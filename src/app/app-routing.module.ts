@@ -46,9 +46,22 @@ const routes: Routes = [
   {
     path: 'trabalhos-feitos',
     loadChildren: () => import('./routes/public/trabalhos-feitos/trabalhos-feitos.module').then( m => m.TrabalhosFeitosPageModule)
-  },  {
+  },
+  {
     path: 'recuperar-senha',
     loadChildren: () => import('./routes/public/recuperar-senha/recuperar-senha.module').then( m => m.RecuperarSenhaPageModule)
+  },
+  {
+    path: 'escolher-nome-usuario',
+    loadChildren: () => import('./routes/public/escolher-nome-usuario/escolher-nome-usuario.module').then( m => m.EscolherNomeUsuarioPageModule)
+  },
+  {
+    path: 'conta-criada',
+    loadChildren: () => import('./routes/public/conta-criada/conta-criada.module').then( m => m.ContaCriadaPageModule)
+  },
+  {
+    path: 'explorar',
+    loadChildren: () => import('./routes/public/explorar/explorar.module').then( m => m.ExplorarPageModule)
   }
 
 ];

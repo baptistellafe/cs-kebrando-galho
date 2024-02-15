@@ -71,6 +71,7 @@ ion-alert.kg-alert {
 // TEXT COLORS
 .text-white { color: var(--white); }
 .text-black { color: var(--black); }
+.text-light-gray { color: var(--light-gray-text); }
 
 // IONIC BACKGROUNDS
 .ion-bg-transparent { --background: transparent; }
@@ -78,6 +79,8 @@ ion-alert.kg-alert {
 // BACKGROUNDS
 .bg-transparent { background: transparent; }
 .ion-bg-transparent { --background: transparent; }
+
+.ion-bg-yellow-very-light { --background: var(--yellow-very-light); }
 
 // FONTS
 .fs-30 { font-size: 30px; }

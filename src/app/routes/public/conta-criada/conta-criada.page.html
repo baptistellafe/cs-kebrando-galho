@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true" class="ion-bg-yellow-very-light">
+  <section class="conta-criada">
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col size="12">
+          <div class="conta-criada-content">
+            <ion-text mode="ios" class="max-text ion-text-center">
+              <h1 class="fs-35">@user, sua conta foi criada com sucesso! O que trás você à Kebrando Galho?</h1>
+              <p class="text-light-gray">Queremos personalizar sua experiência</p>
+            </ion-text>
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div class="tipo-de-usuario">
+            <ion-item lines="none" mode="md" class="prestador">
+              <ion-checkbox (click)="definirTipoDeUsuario('prestador')">Sou prestador de serviço</ion-checkbox>
+            </ion-item>
+
+            <ion-item lines="none" mode="md" class="cliente">
+              <ion-checkbox (click)="definirTipoDeUsuario('cliente')">Sou cliente</ion-checkbox>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+</ion-content>
+
+<ion-footer mode="ios" class="ion-no-border">
+  <ion-toolbar mode="ios" class="ion-bg-yellow-very-light">
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col size="6" class="ion-text-start">
+          <ion-button
+          mode="ios"
+          title="Fazer isso depois"
+          class="clear-gray-light"
+          fill="clear">
+            Fazer isso depois
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="6" class="ion-text-end">
+          <ion-button
+          mode="ios"
+          title="Seguinte"
+          class="solid-yellow-middle-white"
+          fill="solid">
+            Seguinte
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
