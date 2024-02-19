@@ -1,0 +1,15 @@
+<div class="searchbar">
+  <ion-searchbar
+  mode="md"
+  [disabled]="buscando">
+  </ion-searchbar>
+  
+  <ion-button
+  title="Efetuar busca"
+  (click)="efetuarBusca()"
+  mode="ios"
+  [disabled]="buscando">
+    <ng-container><ion-spinner name="dots" *ngIf="buscando"></ion-spinner></ng-container>
+    <ng-container *ngIf="!buscando">Buscar</ng-container>
+  </ion-button>
+</div>

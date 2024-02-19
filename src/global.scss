@@ -17,6 +17,7 @@
 @import "./assets/scss/ionic/ion-buttons.scss";
 @import "./assets/scss/ionic/ion-chip.scss";
 @import "./assets/scss/ionic/ion-input.scss";
+@import "./assets/scss/ionic/ion-breadcrumb.scss";
 
 @import "./assets/scss/kebrando/search.scss";
 
@@ -72,6 +73,7 @@ ion-alert.kg-alert {
 .text-white { color: var(--white); }
 .text-black { color: var(--black); }
 .text-light-gray { color: var(--light-gray-text); }
+.text-gray { color: var(--text); }
 
 // IONIC BACKGROUNDS
 .ion-bg-transparent { --background: transparent; }
@@ -94,6 +96,8 @@ ion-alert.kg-alert {
 .mg-bt-8 { margin-bottom: 8px; }
 .mg-top-18 { margin-top: 18px; }
 .mg-right-6 { margin-right: 6px; }
+.mg-top-10 { margin-top: 10px; }
+.mg-bottom-10 { margin-bottom: 10px; }
 
 // WEIGHT
 .font-weight-300 { font-weight: 300; }

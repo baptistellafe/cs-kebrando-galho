@@ -16,6 +16,8 @@ import { CadastrarServicosComponent } from './cadastrar-servicos/cadastrar-servi
 import { FooterComponent } from './footer/footer.component';
 import { CardPopularComponent } from 'src/app/shared/components/card-popular/card-popular.component';
 import { CardTrabalhoComponent } from './card-trabalho/card-trabalho.component';
+import { BuscarComponent } from './buscar/buscar.component';
+import { CardServicoComponent } from './card-servico/card-servico.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { CardTrabalhoComponent } from './card-trabalho/card-trabalho.component';
     CadastrarServicosComponent,
     FooterComponent,
     CardPopularComponent,
-    CardTrabalhoComponent
+    CardTrabalhoComponent,
+    BuscarComponent,
+    CardServicoComponent
   ],
   imports: [
     CommonModule,
@@ -53,7 +57,9 @@ import { CardTrabalhoComponent } from './card-trabalho/card-trabalho.component';
     CadastrarServicosComponent,
     FooterComponent,
     CardPopularComponent,
-    CardTrabalhoComponent
+    CardTrabalhoComponent,
+    BuscarComponent,
+    CardServicoComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -1,0 +1,32 @@
+<ion-content
+#servico
+[fullscreen]="true">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <!-- SOMENTE MOBILE -->
+      <ion-col size="12" class="ion-hide-lg-up">
+        <kg-buscar></kg-buscar>
+      </ion-col>
+
+      <ion-col size="12" size-lg="6">
+        <ion-breadcrumbs [maxItems]="2">
+          <ion-breadcrumb href="#home"><ion-icon name="home"></ion-icon></ion-breadcrumb>
+          <ion-breadcrumb href="#electronics">Pinturas em geral</ion-breadcrumb>
+        </ion-breadcrumbs>
+
+        <h3 class="text-gray mg-top-10">Pintura em geral</h3>
+      </ion-col>
+
+      <!-- A PARTIR DE TELAS GRANDES -->
+      <ion-col size="6" size-lg="6" class="ion-hide-lg-down">
+        <kg-buscar></kg-buscar>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-margin-top ion-margin-bottom">
+      <ion-col *ngFor="let item of [1,2,3,4]" size="6" size-md="4" size-lg="3">
+        <kg-card-servico></kg-card-servico>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

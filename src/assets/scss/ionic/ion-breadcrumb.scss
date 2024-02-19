@@ -1,0 +1,19 @@
+ion-breadcrumbs {
+  ion-breadcrumb {
+    --color: var(--gray-text);
+    --color-active: var(--gray-text);
+    --color-hover: var(--yellow);
+    opacity: 1;
+
+    ion-icon {
+      font-size: 16px;
+      color: var(--gray-text);
+    }
+
+    &::part(native) {
+      padding: 0;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+  }
+}

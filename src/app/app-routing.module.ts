@@ -62,14 +62,22 @@ const routes: Routes = [
   {
     path: 'explorar',
     loadChildren: () => import('./routes/public/explorar/explorar.module').then( m => m.ExplorarPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./routes/private/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'servico',
+    loadChildren: () => import('./routes/public/servico/servico.module').then( m => m.ServicoPageModule)
   }
-
 ];
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  
+}
