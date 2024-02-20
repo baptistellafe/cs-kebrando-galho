@@ -1,0 +1,47 @@
+.profissional-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  ion-text {
+    margin: 0 16px;
+  }
+
+  .avaliacao-e-preco {
+    flex: 1;
+
+    .avaliacao {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: var(--yellow);
+
+      ion-icon {
+        margin: 0 5px 0 0;
+        font-size: 14px;
+      }
+
+      span {
+        margin: 0 0 0 5px
+      }
+    }
+  }
+}
+
+.swiper-banner-thumbs {
+  border: 3px solid transparent;
+  height: 100px;
+  opacity: .8;
+  transition: 200ms ease all;
+  overflow: hidden;
+
+  &.ativo {
+    border: 3px solid var(--yellow);
+    opacity: 1;
+  }
+
+  img {
+    max-width: --webkit-fill-available;
+    transform: scale(1.4);
+  }
+}

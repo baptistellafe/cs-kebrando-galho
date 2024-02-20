@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TrabalhosFeitosPageRoutingModule } from './trabalhos-feitos-routing.module';
 
 import { TrabalhosFeitosPage } from './trabalhos-feitos.page';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TrabalhosFeitosPageRoutingModule
+    TrabalhosFeitosPageRoutingModule,
+    SharedModule
   ],
   declarations: [TrabalhosFeitosPage]
 })
