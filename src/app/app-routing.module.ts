@@ -70,7 +70,11 @@ const routes: Routes = [
   {
     path: 'servico',
     loadChildren: () => import('./routes/public/servico/servico.module').then( m => m.ServicoPageModule)
+  },  {
+    path: 'profissional',
+    loadChildren: () => import('./routes/public/profissional/profissional.module').then( m => m.ProfissionalPageModule)
   }
+
 ];
 @NgModule({
   imports: [

@@ -7,7 +7,7 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  public usuarioLogado: boolean = false; // ATIVIDADE DO USUÁRIO NO APP - LOGADO OU DESLOGADO.
+  public usuarioLogado: boolean = true; // ATIVIDADE DO USUÁRIO NO APP - LOGADO OU DESLOGADO.
   public arrobaDoUsuario: string = 'phelps';
   public urlDaFoto: string = 'https://ionicframework.com/docs/img/demos/avatar.svg';
 

@@ -12,6 +12,7 @@ export class AvatarComponent  implements OnInit {
   @Input() usuarioLogado: boolean;
   @Input() arrobaDoUsuario: string;
   @Input() urlDaFoto: string;
+  @Input() abrirMenuAoClicar: boolean = true;
 
   constructor(public menuCtrl: MenuController) { }
 
@@ -22,8 +23,13 @@ export class AvatarComponent  implements OnInit {
    * @param menuId ID do menu.
    * @author Felipe Baptistella.
    */
-  public toggleMenu(menuId: string): void {
-    this.menuCtrl.toggle(menuId);
+  public toggleMenu(menuId: string, e?: any): void {
+    if (this.abrirMenuAoClicar) {
+      this.menuCtrl.toggle(menuId);
+    } else {
+      e.preventDefault();
+      console.log('O clique no avatar não vai abrir o menu.');
+    }
   }
 
 }
